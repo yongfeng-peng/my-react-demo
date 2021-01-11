@@ -10,6 +10,8 @@ import AntdTest from './components/AntdTest';
 import CommentList from './components/CommentList';
 import Hoc from './components/Hoc';
 import CartSample from './components/CartSample';
+import FunCount from './components/FunCount'
+import ClassCount from './components/ClassCount'
 
 function formatName(user) {
   return `${user.firstName}---${user.lastName}`
@@ -45,23 +47,35 @@ class App extends Component {
         <img src={logo} style={{width:'100px'}} />
         {/* jsx也是表达式 */}
         {jsx}
-        {/* 使用其他组件 */}
-        <Welcome1 name='hello world'></Welcome1>
+        {/* 使用其他组件
+             <Welcome1 name='hello world'></Welcome1>
         <Welcome2 name='hello world'></Welcome2>
+         */}
+     
         {/* 生命周期 */}
-        {/* {this.state.prop && <Lifecycle prop={this.state.prop}></Lifecycle>} */}
-        {/* State和状态改变setState */}
+       {/* {this.state.prop && <Lifecycle prop={this.state.prop}></Lifecycle>}*/}
+        <Lifecycle></Lifecycle>
+        {/* State和状态改变setState
         <Clock></Clock>
+
+         */}
         {/* <StateTest></StateTest> */}
         {/* antd */}
         {/* <AntdTest></AntdTest> */}
-        {/* 展示组件和容器组件 */}
+        {/* 展示组件和容器组件
         <CommentList></CommentList>
-        {/* 高阶组件 */}
+
+         */}
+        {/* 高阶组件
         <Hoc></Hoc>
+          
+        */}
         {/* 组件复合 */}
         {/* <Composition></Composition> */}
         {/* <CartSample></CartSample> */}
+        {/* hooks */}
+        <FunCount></FunCount>
+        <ClassCount></ClassCount>
       </div>
     );
   }
